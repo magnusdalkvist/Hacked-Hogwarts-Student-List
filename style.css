@@ -1,0 +1,246 @@
+body {
+  background-color: hsl(20, 60%, 10%);
+  background-image: url("https://www.transparenttextures.com/patterns/leather.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1rem 2rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: goldenrod;
+  text-align: center;
+  font-family: serif;
+  font-style: italic;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+input {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+}
+
+input:focus {
+  outline: black 2px solid;
+}
+
+input::placeholder {
+  color: gray;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons button {
+  background-color: goldenrod;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 0.25rem 1rem;
+}
+
+.student_list {
+  margin: 0 auto;
+}
+
+table {
+  border-spacing: 0;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: solid goldenrod 2px;
+  padding: 1rem 1rem 0;
+}
+
+th {
+  color: goldenrod;
+  font-weight: normal;
+}
+
+.sortBy {
+  font-weight: bold;
+}
+
+#sorting th.sortBy[data-sort-direction="desc"]::after {
+  content: " ↑";
+}
+
+#sorting th.sortBy[data-sort-direction="asc"]::after {
+  content: " ↓";
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#popup {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  padding: 1rem;
+}
+
+#popup article {
+  align-self: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: min-content;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+  color: white;
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+#close {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.images {
+  position: relative;
+}
+
+.houseCrest {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+}
+
+.Gryffindor {
+  background: linear-gradient(#3d0a07 25%, #aa8c32);
+}
+
+.Slytherin {
+  background: linear-gradient(#716e6c, #2a4325 50%);
+}
+
+.Hufflepuff {
+  background: linear-gradient(#716e6c, #ae9a41);
+}
+
+.Ravenclaw {
+  background: linear-gradient(#69533a, #07111a 50%);
+}
+
+[data-field="inquisitorial"],
+[data-field="prefect"] {
+  text-align: center;
+  cursor: pointer;
+  min-width: 2em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.info p {
+  margin: 0;
+}
+
+.info button {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.25rem 0.5rem;
+}
+
+/******** DIALOG styling **********/
+
+.dialog {
+  display: none;
+}
+
+.dialog.show {
+  z-index: 10;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialogcontent {
+  background-color: hsl(20, 60%, 10%);
+  background-image: url("https://www.transparenttextures.com/patterns/leather.png");
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  max-width: 500px;
+  padding: 10vw 8vw 8vw 8vw;
+  position: relative;
+}
+
+.dialog h1 {
+  margin: 0;
+}
+
+.dialog h2 {
+  margin: 0.5em 0;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.dialog .closebutton {
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  top: 4vw;
+  right: 4vw;
+  border: none;
+  background-color: transparent;
+  font-size: 90%;
+  color: darkgray;
+}
+
+.dialog .closebutton:hover {
+  color: goldenrod;
+}

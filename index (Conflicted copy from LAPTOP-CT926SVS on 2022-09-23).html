@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="popup">
+      <div id="close">&#x2715</div>
+      <article>
+        <img class="houseCrest" src="" alt="" />
+        <div class="images">
+          <img class="studentPhoto" src="" alt="" onerror="this.src='images/no_image.png';"/>
+          <h2 class="fullName"></2>
+        </div>
+        <div class="info">
+          <p class="bloodStatus">Blood-status:</p>
+          <button id="expel">Expel student</button>
+        </div>
+      </article>
+    </section>
+    <h1>Students</h1>
+    <p>
+      Search:
+      <input type="text" placeholder="Fx" />
+    </p>
+    <p>
+      Filter:
+      <button class="filter" data-action="filter" data-filter="Gryffindor">Gryffindor</button>
+      <button class="filter" data-action="filter" data-filter="Hufflepuff">Hufflepuff</button>
+      <button class="filter" data-action="filter" data-filter="Ravenclaw">Ravenclaw</button>
+      <button class="filter" data-action="filter" data-filter="Slytherin">Slytherin</button>
+      <button class="filter" data-action="filter" data-filter="all">all</button>
+    </p>
+    <table id="list">
+      <thead>
+        <tr id="sorting">
+          <th data-action="sort" data-sort-direction="asc"  data-sort="firstName" class="sortBy">Firstname</th>
+          <th data-action="sort" data-sort-direction="desc" data-sort="lastName">Lastname</th>
+          <th data-action="sort" data-sort-direction="desc" data-sort="middleName">Middlename</th>
+          <th data-action="sort" data-sort-direction="desc" data-sort="nickName">Nickname</th>
+          <th data-action="sort" data-sort-direction="desc" data-sort="house">House</th>
+          <th data-action="sort" data-sort-direction="desc" data-sort="prefect">Prefect ♥</th>
+          <th data-action="sort" data-sort-direction="desc" data-sort="inquisitorial">Inquisitorial ⭐</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="flex">
+      <p id="expelledStudents">Students expelled:</p>
+      <p id="currentDisplay">Students displayed:</p>
+    </div>
+    <template id="student">
+      <tr>
+        <td class="clickable" data-field="firstName">Firstname</td>
+        <td class="clickable" data-field="lastName">Lastname</td>
+        <td class="clickable" data-field="middleName">Middlename</td>
+        <td class="clickable" data-field="nickName">Nickname</td>
+        <td class="clickable" data-field="house">House</td>
+        <td data-field="prefect">♡</td>
+        <td data-field="inquisitorial"></td>
+      </tr>
+    </template>
+    <div id="onlyonekind" class="dialog">
+      <div class="dialogcontent">
+        <button class="closebutton">close</button>
+        <h1>You can only have two prefects of each house</h1>
+        <h2>Remove the other if you want to appoint a new one</h2>
+        <p><button data-action="remove1">remove</button> <span class="student1">NAME, the TYPE</span></p>
+      </div>
+    </div>
+  </body>
+</html>

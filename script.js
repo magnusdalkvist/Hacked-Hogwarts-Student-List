@@ -369,9 +369,9 @@ function hackTheSystem() {
     let random;
     allStudents.forEach((student) => {
       random = Math.floor(Math.random() * 3);
-      if ((random = 0)) {
+      if (random == 0) {
         student.bloodStatus = "pure-blood";
-      } else if ((random = 1)) {
+      } else if (random == 1) {
         student.bloodStatus = "half-blood";
       } else {
         student.bloodStatus = "muggle-blood";

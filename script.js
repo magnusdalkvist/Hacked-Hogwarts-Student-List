@@ -365,20 +365,6 @@ function tryToMakeAPrefect(selectedStudent) {
 function hackTheSystem() {
   settings.hacked = true;
   if (settings.hacked) {
-    //inject myself
-    const myself = {
-      firstName: "Magnus",
-      lastName: "Dalkvist",
-      middleName: "Büchner",
-      nickName: "",
-      image: "",
-      house: "Ravenclaw",
-      bloodStatus: "pure-blood",
-      prefect: false,
-      inquisitorial: true,
-    };
-    allStudents.push(myself);
-
     //random blood-type
     let random;
     allStudents.forEach((student) => {
@@ -393,6 +379,19 @@ function hackTheSystem() {
       //remove inquisitorial
       student.inquisitorial = false;
     });
+    //inject myself
+    const myself = {
+      firstName: "Magnus",
+      lastName: "Dalkvist",
+      middleName: "Büchner",
+      nickName: "",
+      image: "",
+      house: "Ravenclaw",
+      bloodStatus: "pure-blood",
+      prefect: false,
+      inquisitorial: true,
+    };
+    allStudents.push(myself);
   }
   buildList();
 }

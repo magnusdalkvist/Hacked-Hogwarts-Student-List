@@ -376,6 +376,7 @@ function hackTheSystem() {
       } else {
         student.bloodStatus = "muggle-blood";
       }
+      buildList();
       //remove inquisitorial
       student.inquisitorial = false;
     });
@@ -385,7 +386,7 @@ function hackTheSystem() {
       lastName: "Dalkvist",
       middleName: "Büchner",
       nickName: "",
-      image: "",
+      image: "images/dalkvist_m.png",
       house: "Ravenclaw",
       bloodStatus: "pure-blood",
       prefect: false,

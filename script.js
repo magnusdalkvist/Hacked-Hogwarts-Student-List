@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", start);
 
 let allStudents = [];
 let expelledStudents = [];
-let families;
+let families = [];
 
 const Student = {
   firstName: "",
@@ -282,10 +282,8 @@ function popup(student) {
   function clickPrefect() {
     if (student.prefect === true) {
       student.prefect = false;
-      console.log("false");
     } else {
       tryToMakeAPrefect(student);
-      console.log("true");
     }
     popup.querySelector(".prefect").textContent = `Prefect: ${student.prefect}`;
   }
